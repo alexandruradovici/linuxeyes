@@ -1,0 +1,204 @@
+COMMAND LINE
+ -p           : play
+ --colors     : force color usage
+ --nocolors   : B&W, for dummy terminals (telnet)
+ --autoscr    : force autodetect the screen's size
+ --noautoscr  : don't autodetect the screen's size
+ --fakelines  : draw lines on terminals without ACS
+ --new_start  : start with default configuration
+ --debug      : show debug (not for users)
+
+PLAYER
+ z            : previous
+ x            : play
+ c            : pause
+ v            : stop
+ b            : next
+ Z            : previous in playlist
+ B            : next in playlist
+ s            : Shuffle On/Off
+ <ENTER>      : Play 
+ <SPACE BAR>  : Set As Next 
+ <TAB>        : Add/Remove to/from filter 
+ <LEFT>       : Backward 1%
+ <RIGHT>      : Forward 1%
+ <            : Backward 5%
+ >            : Forward 5%
+ f            : Filter Options
+ f,c          : Clear Filter
+ f,p          : On/Off persistent filter
+ f,a          : Add filter (load, don't delete old)
+ f,l          : Load filter (delete old)
+ f,s          : Save filter
+ r            : Repreat current song 
+ i or ALT+3   : ID3v1.1 TAG Editor (for selected song)
+ I            : ID3v1.1 TAG Editor (for current song)
+ j or F3      : Jump to file
+ m            : Quick Message
+ M            : Messages List
+ <INSERT>     : Volume + 
+ <DELETE>     : Volume - 
+ <HOME>       : PCM + 
+ <END>        : PCM - 
+ ,            : Balance left 
+ .            : Balance right 
+ e            : Equalizer
+ A            : Automatic Equalizer On/Off
+ '            : Repaint Desktop
+ *            : Increase desktop width
+ /            : Decrease desktop width
+ +            : Increase desktop height
+ -            : Decrease desktop height
+ @            : Full Screen Desktop
+ t            : Switch clock display mode
+ \\            : Change Password
+ !            : Lock Display
+ =            : Cycle Status Bar Modes
+ h or F1      : Help
+ F2           : What's New
+ ?            : About and Statistics
+ {            : Set Alarm On Time
+ }            : Set Alarm Off Time
+ T            : Set Sleep mode
+ |            : On/Off Shut Down mode
+ o            : Settings
+ ESC          : Screen Saver
+ ALT+SHIFT+Q  : Quit
+
+PLAYLIST
+ a            : Add File
+ d            : Delete File
+ D            : Add Directory
+ R            : Delete All
+ S            : Sort Playlist
+ <UP>         : Cursor Up
+ <DOWN>       : Cursor Down
+ <PAGE UP>    : Page Up
+ <PAGE DOWN>  : Page Down
+ 0..9         : Fast Scroll
+ [            : Move Up
+ '            : Move Down
+ l            : Locate Current Song
+ L            : Autolocate Current Song
+ p            : Playlist Options
+ p,n          : New Playlist
+ p,l          : Load Playlist
+ p,s          : Save Playlist
+ p,i          : Import Playlist
+ p,e          : Export Playlist
+ E            : Edit playlist file entry
+ n            : Refresh list
+ ;            : On/Off save playlist position on exit
+
+JUMP TO FILE
+ <ENTER>      : Play
+ <SPACE BAR>  : Set as next
+ <TAB>        : Add/Remove to/from filter
+ F            : Add/Remove all songs to filter
+ i            : ID3 TAG Edditor
+ ESC or q     : Close window
+
+EQUALIZER WINDOW
+ <PAGE UP>    : Up ALL
+ <PAGE DOWN>  : Down ALL
+ a/z          : Up/Down Band #1
+ s/x          : Up/Down Band #2
+ d/c          : Up/Down Band #3
+ f/v          : Up/Down Band #4
+ g/b          : Up/Down Band #5
+ h/n          : Up/Down Band #6
+ j/m          : Up/Down Band #7
+ k/,          : Up/Down Band #8
+ l/.          : Up/Down Band #9
+ ;//          : Up/Down Band #10
+ r            : Set all bands to 0 (reset equalizer)
+ L            : Load Preset
+ S            : Save Preset
+ I            : Import Preset(s)
+ D            : Delete Preset(s)
+ A            : On/Off Automatic Equalizer
+ 
+FILE DIALOG
+ <Up>         : Move Up
+ <Down>       : Move Down
+ <Left>       : Backward 1%
+ <Right>      : Forward 1%
+ <PgUp>       : Page Up
+ <PgDn>       : Page Down
+ <            : Backward 5%
+ >            : Forward 5%
+ <ENTER>      : End Selection (Open)
+ <SPACE BAR>  : Select
+ <TAB>        : Play
+ ALT+<SPACE>  : Set As Next
+ z            : previous
+ x            : play
+ c            : pause
+ v            : stop
+ b            : next
+ i or ALT+3   : ID3v1.1 Tag Editor
+ ALT + _      : Goto a _*.mp3 file (_:[A..Z,a..z])
+ ESC or q     : Close Dialog
+
+ID3 TAG EDITOR
+ Load +       : Load Settings from ID3+ Info
+ Save +       : Save Settings to ID3+ Info
+                * Save + won't have any effect
+                  if you close the dialog with
+                  the ESC key.
+ <Enter>      : Close and Save Information
+ <ESC>        : Close, don't save
+
+MESSAGES LIST
+ <INSERT>     : Add a message
+ <DELETE>     : Delete selected message
+ <TAB>        : Edit selected message
+ L            : Load messages form a file
+ S            : Save messages to a file
+ <ENTER>      : Close and Save
+ <ESC>        : Close, don't save
+
+STATISTICS
+ R            : Reset current session statistics
+
+SPECIAL FUNCTIONS
+ P            : Make playlist for MP3 CD Player
+                * The player will ask you for the CD
+                  mount path (usualy /mnt/cdrom)
+                * A list with the files on that CD
+                  will be displayed.
+                * Press <ENTER> to save the list.
+                * Tested on JazzPIPER MCD650S
+
+PLAYER MODES
+ Normal       : Next song in playlist (don\'t shuffle)
+ Shuffle      : Random next song (shuffle)
+ Next Song    : Next song is already selected
+ Filter       : There are files in the filter
+ P-Filter     : The filter is persistent
+ Password     : Display is locked with password
+ Sleep        : Shut Down at a specific time
+ Shut Down    : Shut Down after current song
+
+STATUS BAR
+ Mode 1       : Displays mode, vol, pcm, bal & flags
+ Mode 2       : Displays next song's name
+ Mode 3       : Displays nr of files in filter
+ Mode 4       : Displays alram start & stop time
+ Mode 5       : Displays shut down time
+ Flags   S - save playlist on exit
+         E - auto equalizer
+         L - autolocate current song
+         P - use persistent filter
+         A - Alarm is set
+         + - Use ID3 Plus Information
+
+SONG DISPLAY FORMAT
+ %1 or %t     : Track Number
+ %2 or %a     : Artist
+ %3 or %s     : Song
+ %4 or %A     : Album
+ %5 or %y     : Year
+ %6 or %g     : Genre
+ %7 or %c     : Comment
+ %8 or %f     : File Name

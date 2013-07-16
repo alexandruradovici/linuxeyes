@@ -1,0 +1,21 @@
+* bug la revenire din screen saver + forward
+* meniuri cu sageti
+* apelare messages() la incarcarea listei
+* adaugare si stergere de fisiere cu and si not
+* meniu cu functii (un fel de pop-up menu)
+* redefinire taste
+* filter numai cu numele fisierului (fara cale)
+* unload filter
+* xor filter
+* new import xmms display x% (asta nu e prea urgenta!)
+* set fs_command
+* export eqlizator
+* timer command
+* import winamp playlist (numai schimbarea de drive, mount-uri)
+* dubla egalizare
+* mixer
+* timpul filtrului
+* la autolocate vezi daca e pe ecran, nu mai fa si repara autoloc la capete
+* clipirea timpului la pauza
+* backup din cand in cand (la optiuni)
+* add director cu subdirector

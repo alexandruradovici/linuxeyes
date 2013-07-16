@@ -1,0 +1,93 @@
+linuxeyes v0.6 (July 2002)
+    * added 10-band equalizer
+    * welcome text display bug fixed (~"LinuxEyes v0.6 [press h for help]")
+    * added load/save equalizer functions
+    * title bar content changed ("LinuexEyes MP3 Player")
+    * added clock on title bar
+    * keymap changed: e : Equalizer <-> E : File Entry
+    * added 4 clock display modes
+    * help was reorganised, now it's more clear
+    * maximmum file number in playlist extended to 10000 (was 5000)
+    * added display protection system (lock display with password)
+    * added a new player mode ("Password")
+    * Shut Down mode bug fixed (playlist is now saved in Shut Down mode)
+    * filename size enlarged (from 500 to 1000) => new playlist format (LE6PL)
+    * quit key changed to 'Q' for more safe use
+    * add files dialog bux fixed (at least I hope so)
+    * new code for current song and next song, now the filename is stored, not the playlist number
+    * some useless code was eliminated
+    * playlist format changed to LE6PL
+    * added import/export playlist format for LE5PL (LinuxEyes v0.5); export is not recommaned
+    * unlimited previous songs bug fixed (previous function stops at the first song)
+    * added new clock mode (no clock mode)
+    * search (jump) function searches now in filenames too, not only in id3
+    * about box content changed
+    * currsor is now hidden
+    * libncurses.so.5.2 (Red Hat 7.3) border bug fixed, player does not deppend on libncurses borders anymore (Yuppie!)
+    * edit entries have a currsor now
+    * file existance check bug fixed (directories are not reconsied as OK files anymore)
+    * "Shut Down" mode works better now, exists clean and then shuts down
+    * Search function mow displays an empty list if nothing found
+    * added screen size autodetect function (--autoscr), not yet finished so use with care
+    * dropped add url edit box (wasn't working since the begining, Oops!)
+    * help was updated, some keys where missing (Sorry)
+
+linuxeyes v0.5 (December 2001)
+    * added special functions
+    * JazzPIPER MCD650S Playlist Generator
+    * page up/page down bug fixed
+    * jump to file dialog bug fixed (text too long)
+    * playlist format changed (binary format)
+    * added reverse playlist function
+    * added playlist import/export functions
+    * import/export formats supported: XMMS and le3
+    * name bug fixed (logo display)
+    * full resizeable desktop (for hi-res terminals)
+    * too small desktop bug fixed
+    * added console messages display
+    * new configuration files (~/.linuexeyes.console, ~/.linuxeyes.config, ~/.linuxeyes.playlist)
+    * new possible install mode (/usr/local/xmp)
+    * some useless code has been eliminated
+    * bottom line bug fixed
+
+linuxeyes v0.4 (November 2001)
+    * added playlist options menu  
+
+linuxeyes v0.3 (October 2001)
+    * show non-existing files (files highlight)
+    * "Shut Down" after this song, key "0"
+    * nice scrolling
+    * player modes ("Normal","Shuffle","Next Song","Shut Down")
+    * added file information box (id3 tag info)
+    * added editbox for "save playlist" and "Add URL"
+    * better playlist load display
+    * added playlist file entry editbox
+    * added jump to file function
+    * mode is saved to config file
+    * playlist format changed
+    * auto-refesh list excluded
+    * new playlist filetype, better
+    * total time display
+    * file add dialog bug fixed (text too long)
+
+linuxeyes v0.2 (July 2001)
+    * playlist editor
+    * id3 and time playlist display
+    * better playlist function
+    * added id3 tag support
+    * fixed name bug
+    * added master volume, pcm volume and balance control
+    * new key defines
+    * added status bar
+    * better shuffle function
+    * previous function add
+    * resizeable desktop
+    * bad mpeg file problem solved
+    * better help, now in widow
+    * better about page in window
+        
+linuxeyes v0.1 (December 2000)
+    * first release
+    * MPEG file support
+    * playlist
+    * random next
