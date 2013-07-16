@@ -2,14 +2,21 @@
 *.slo
 *.lo
 *.o
+<<<<<<< HEAD
 xmp
 
 # Compiled Dynamic libraries
+=======
+
+# Compiled Dynamic libraries
+*.so
+>>>>>>> 2f08132bc83e0a817642f68c8181b0d0dc420999
 *.dylib
 
 # Compiled Static libraries
 *.lai
 *.la
+<<<<<<< HEAD
 
 # Packages #
 ############
@@ -40,3 +47,6 @@ xmp
 ehthumbs.db
 Thumbs.db
 
+=======
+*.a
+>>>>>>> 2f08132bc83e0a817642f68c8181b0d0dc420999
