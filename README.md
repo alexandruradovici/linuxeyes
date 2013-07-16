@@ -7,11 +7,11 @@ Raspbperry Pi
 -------------
 Download and compile it
 
-make
+    make
 
 Run it
 
-./xmp
+    ./xmp
 
 Changelog
 ---------
