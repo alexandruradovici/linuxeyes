@@ -7,260 +7,260 @@ Raspbperry Pi
 -------------
 Download and compile it
 
-    make
+make
 
 Run it
 
-    ./xmp
+./xmp
 
 Changelog
 ---------
 linuxeyes v1.1 (Raspberry Pi version)
-    * added LIBBASS.SO decoder
+* added LIBBASS.SO decoder
 
 linuxeyes v1.1 ()
-    * terminal size waring bug fixed (now 30 lines if OK)
-    * added system information display in about box
-    * added "Z" and "B" - play next (Z) or previous (B) song in playlist
-    * fixed about page down arrow bug
-    * added build time in about box
-    * fixed status display in about box (again!)
-    * added new key listening system
-    * modified list display code (new colors also)
-    * fixed crash bug on Fedora Core 1 (at least I hope so, free() problem)
-    * added message bar
-    * droped console file, debug only on syslog now
-    * added messages list
-    * added "What's New" list (F2 key)
-    * fixed "jump to file" text remaining bug
-    * fixed edit box delete bug
-    * fixed refresh list freezing problem
-    * fixed play previous function for save playlist, now the first played song is the saved playlist song
-    * added playlist file compression (gzip), playlist file is much smaller now (ratio 2.8%), format LEPZ11
-    * fixed messages bar crash (at least I think so)
-    * added memory out string for current song (ftok ("/", 'E'), IPC_CREAT|0666)
-    * fixed "glib-detected" exit error
+* terminal size waring bug fixed (now 30 lines if OK)
+* added system information display in about box
+* added "Z" and "B" - play next (Z) or previous (B) song in playlist
+* fixed about page down arrow bug
+* added build time in about box
+* fixed status display in about box (again!)
+* added new key listening system
+* modified list display code (new colors also)
+* fixed crash bug on Fedora Core 1 (at least I hope so, free() problem)
+* added message bar
+* droped console file, debug only on syslog now
+* added messages list
+* added "What's New" list (F2 key)
+* fixed "jump to file" text remaining bug
+* fixed edit box delete bug
+* fixed refresh list freezing problem
+* fixed play previous function for save playlist, now the first played song is the saved playlist song
+* added playlist file compression (gzip), playlist file is much smaller now (ratio 2.8%), format LEPZ11
+* fixed messages bar crash (at least I think so)
+* added memory out string for current song (ftok ("/", 'E'), IPC_CREAT|0666)
+* fixed "glib-detected" exit error
 
 linuxeyes v1.0 (June 2003)
-    * added welcome window for the first time running LinuxEyes
-    * made a rpm distribution
-    * files dialogs are now resizable (after the screen size)
-    * "." entry from files dialog removed, ".." is now the first
-    * fixed display time in playlist for songs under 60 secs (wrong "if" ;))
-    * fixed default playlist name
-    * fixed export playlist edit box
-    * current song name display bug fixed
-    * fixed status bar display bug
-    * fixed file list bug, up to 6000 files now
-    * added song preview function to file dialogs (key: TAB)
-    * playlist artist & song data fixed (31 chars now, not 30)
-    * added fullscreen key (key @)
-    * added ID3 TAG Editor from file dialogs
-    * added player control keys to file dialogs (z,x,c,v,b)
-    * added jump to file to file dialogs (ALT + _)
-    * optimized playlist engine
-    * signed playlist as "LEPL10"
-    * added debug parameter (--debug)
-    * new help engine (help generator)
-    * new Special Function for JazzPIPER (this time I hope it works)
-    * next song selection bug fixed (now keys will work even if all songs are bad)
-    * added show/hide song's numbers function
-    * added song display format function
-    * added show list with JazzPIPER MCD650S Playlist
-    * added version id constants
-    * fixed Shut Down mode from screen saver
-    * fixed version and help generators
-    * fixed help
-    * fixed Next Song display priority (no file 0, next song 1, in filter 2, current song 3)
-    * fixed read keys bugs (getch til ERR)
-    * improved edit, check and list boxses (disabled mode)
-    * added buttons
-    * automatic equalizer function fixed
-    * added ID3 PLUS Tag Editor
-    * fixed previous function
-    * added shut down warining
-    * added filter options menu
-    * added filter add, load and save functions
-    * fixed playlist options menu bug (playnext problem)
-    * added full m3u import function
-    * added export to m3u function
-    * added terminal size waring functions
+* added welcome window for the first time running LinuxEyes
+* made a rpm distribution
+* files dialogs are now resizable (after the screen size)
+* "." entry from files dialog removed, ".." is now the first
+* fixed display time in playlist for songs under 60 secs (wrong "if" ;))
+* fixed default playlist name
+* fixed export playlist edit box
+* current song name display bug fixed
+* fixed status bar display bug
+* fixed file list bug, up to 6000 files now
+* added song preview function to file dialogs (key: TAB)
+* playlist artist & song data fixed (31 chars now, not 30)
+* added fullscreen key (key @)
+* added ID3 TAG Editor from file dialogs
+* added player control keys to file dialogs (z,x,c,v,b)
+* added jump to file to file dialogs (ALT + _)
+* optimized playlist engine
+* signed playlist as "LEPL10"
+* added debug parameter (--debug)
+* new help engine (help generator)
+* new Special Function for JazzPIPER (this time I hope it works)
+* next song selection bug fixed (now keys will work even if all songs are bad)
+* added show/hide song's numbers function
+* added song display format function
+* added show list with JazzPIPER MCD650S Playlist
+* added version id constants
+* fixed Shut Down mode from screen saver
+* fixed version and help generators
+* fixed help
+* fixed Next Song display priority (no file 0, next song 1, in filter 2, current song 3)
+* fixed read keys bugs (getch til ERR)
+* improved edit, check and list boxses (disabled mode)
+* added buttons
+* automatic equalizer function fixed
+* added ID3 PLUS Tag Editor
+* fixed previous function
+* added shut down warining
+* added filter options menu
+* added filter add, load and save functions
+* fixed playlist options menu bug (playnext problem)
+* added full m3u import function
+* added export to m3u function
+* added terminal size waring functions
 
 linuxeyes v0.9 (March 2003)
-    * added ALT+3 keymap for ID3 TAG Editor (Winamp compatibility)
-    * genres titles corrected (A Capella, not Acapella)
-    * added flags to status bar (SEL), see help
-    * help arrows bug fixed
-    * Radio mode -> Alarm mode (more normal name)
-    * Alarm mode will now only be displayed in flags list
-    * Added "A" key for setting autoequalizer from main interface
-    * forward and backward function now go 1% instead of 5%
-    * statistics display bug fixed (stupid bug ;))
-    * new help generation system
-    * added skip 5% forward & backward functions
-    * fixed display of 7 bits chars in fakkelines mode, won't show ugly chars
-    * fixed too long song name display in playlist, won't get outside borders, will display "..." at the end
-    * fixed show song in upper part of the screen (current song), will also display "..." (label function)
-    * fixed search song list display, will display now "..."
-    * some little changes made on ID3 TAG Editor
-    * fixed balance keys in help ("," and ".", NOT "<" and ">")
-    * autoplay and save playlist position engine changed a little bit (play instead of playnext)
-    * quit key changed to ALT+SHIFT+Q (Caps Lock problem! Who invented this button?! ;))
-    * added normal cursor to edit boxes (with_key boxes only)
-    * filter highlighting is now with the highest priority
-    * scroll bug fixed ("l" key problem)
-    * edit boxes fixed (full scrolling, arrow keys work, delete key works)
-    * added bad character replacement option, you may now chosw the character for replacement
-    * added screen saver (clock+date)
-    * added autodetection of terminal colors (--nocolors will only force it now)
-    * fixed screen size autodetection, this is done now by default (block using --noautodetect)
-    * fixed help keys, PgUp and PgDn keys work now on help
+* added ALT+3 keymap for ID3 TAG Editor (Winamp compatibility)
+* genres titles corrected (A Capella, not Acapella)
+* added flags to status bar (SEL), see help
+* help arrows bug fixed
+* Radio mode -> Alarm mode (more normal name)
+* Alarm mode will now only be displayed in flags list
+* Added "A" key for setting autoequalizer from main interface
+* forward and backward function now go 1% instead of 5%
+* statistics display bug fixed (stupid bug ;))
+* new help generation system
+* added skip 5% forward & backward functions
+* fixed display of 7 bits chars in fakkelines mode, won't show ugly chars
+* fixed too long song name display in playlist, won't get outside borders, will display "..." at the end
+* fixed show song in upper part of the screen (current song), will also display "..." (label function)
+* fixed search song list display, will display now "..."
+* some little changes made on ID3 TAG Editor
+* fixed balance keys in help ("," and ".", NOT "<" and ">")
+* autoplay and save playlist position engine changed a little bit (play instead of playnext)
+* quit key changed to ALT+SHIFT+Q (Caps Lock problem! Who invented this button?! ;))
+* added normal cursor to edit boxes (with_key boxes only)
+* filter highlighting is now with the highest priority
+* scroll bug fixed ("l" key problem)
+* edit boxes fixed (full scrolling, arrow keys work, delete key works)
+* added bad character replacement option, you may now chosw the character for replacement
+* added screen saver (clock+date)
+* added autodetection of terminal colors (--nocolors will only force it now)
+* fixed screen size autodetection, this is done now by default (block using --noautodetect)
+* fixed help keys, PgUp and PgDn keys work now on help
 
 linuxeyes v0.8 (February 2003)
-    * added Current Song Information (id3) tag function, key: I
-    * added equalizer import function
-    * added equalizer import filter for XMMS presets
-    * equalizer band 8 bug fixed
-    * added exualizer import filter for LinuxEyes v0.6 (LE_EQU0_6)
-    * added presets function, old presets can now be imported
-    * NEW ID3 TAG read engine, now supports all ID3v1 and ID3v1.1 tags, it should read now all id3 tags
-    * added gernre to id3 tag information (supports WinAmp genres also, total 126)
-    * added track number to id3 tag information
-    * added equalizer import filter for EQF files (Winamp & XMMS EQF v1.1 files)
-    * added equalizer import filter for Winamp presets
-    * added delete equalizer presets function
-    * search function improved, it now splits the text in words (separted by " ,.?!-")
-    * added filter function => new mode: "Filter" & "P-Filter"
+* added Current Song Information (id3) tag function, key: I
+* added equalizer import function
+* added equalizer import filter for XMMS presets
+* equalizer band 8 bug fixed
+* added exualizer import filter for LinuxEyes v0.6 (LE_EQU0_6)
+* added presets function, old presets can now be imported
+* NEW ID3 TAG read engine, now supports all ID3v1 and ID3v1.1 tags, it should read now all id3 tags
+* added gernre to id3 tag information (supports WinAmp genres also, total 126)
+* added track number to id3 tag information
+* added equalizer import filter for EQF files (Winamp & XMMS EQF v1.1 files)
+* added equalizer import filter for Winamp presets
+* added delete equalizer presets function
+* search function improved, it now splits the text in words (separted by " ,.?!-")
+* added filter function => new mode: "Filter" & "P-Filter"
   - mode order is Normal, Shuffle, Filter, P-Filter, Nest Song, Password, Shut Down
-    * added save playlist position on exit function
-    * added sleep mode, the player will shut down a a certain hour
-    * fakelines mode bug fixed (arrows will now appear)
-    * added ID3v1.1 TAG EDITOR !!!
-    * added m3u playlist import filter
-    * new paramer "--new_start", starts LinuxEyes with default configuration, try this if you can't start LinuxEyes
-    * added new status bar types ("filter", "radio" and "shut down at")
-    * added new mode, radio
-    * added auto equalizer preset function
-    * signal keys don't function anymore, player can now be closed only by Q
-    * windows are now centered
-    * added PgUp and PgDn function on lists (eg: file list)
-    * windows close key changed to ESC, q still works on some windows
-    * added keys F1 (help) and F3 (search) for Winamp compatibility
-    * configuration load bug fix (config is now tested of realness)
-    * added autolocate current song function
-    * added settings window
-    * too long playlist display name bug fixed (now 150 max)
-    * artist & song display bug fixed, now cleanup is good
-    * added ID3 tag function on search window
-    
+* added save playlist position on exit function
+* added sleep mode, the player will shut down a a certain hour
+* fakelines mode bug fixed (arrows will now appear)
+* added ID3v1.1 TAG EDITOR !!!
+* added m3u playlist import filter
+* new paramer "--new_start", starts LinuxEyes with default configuration, try this if you can't start LinuxEyes
+* added new status bar types ("filter", "radio" and "shut down at")
+* added new mode, radio
+* added auto equalizer preset function
+* signal keys don't function anymore, player can now be closed only by Q
+* windows are now centered
+* added PgUp and PgDn function on lists (eg: file list)
+* windows close key changed to ESC, q still works on some windows
+* added keys F1 (help) and F3 (search) for Winamp compatibility
+* configuration load bug fix (config is now tested of realness)
+* added autolocate current song function
+* added settings window
+* too long playlist display name bug fixed (now 150 max)
+* artist & song display bug fixed, now cleanup is good
+* added ID3 tag function on search window
+
 linuxeyes v0.7 (December 2002)
-    * added some stupid eq presets ;)
-    * id3 tag bug fixed (Unknown Artist or Unknown Song will not apear " - .." or "... - ")
-    * input bug fixed (cbreak - nocbreak)
-    * added locate current song in playlist function
-    * Some keymapping changed, Shut Down Mode is now "|"
-    * 1..9 to fast scroll (1=1/9 of playlist, 2=2/9, ... 9 = end of playlist)
-    * scroll action made more simpler
-    * empty id3 tag bug fixed (" - " should not appear anymore)
-    * fixed playlist display for number > 1000
-    * ncurses acs characters bug can be now "skiped" by "--fakelines" argument
-        eg: xmp --fakelines; 
-	+ if someone nows how to fix the ncurses bug, please email me!
-    * playlist load display bug fixed (stupid bug)
-    * added statistics (current session and global songs played and time played)
-    * Alexandru Armean's email address corrected (pitu@papiu.orizont.net)
+* added some stupid eq presets ;)
+* id3 tag bug fixed (Unknown Artist or Unknown Song will not apear " - .." or "... - ")
+* input bug fixed (cbreak - nocbreak)
+* added locate current song in playlist function
+* Some keymapping changed, Shut Down Mode is now "|"
+* 1..9 to fast scroll (1=1/9 of playlist, 2=2/9, ... 9 = end of playlist)
+* scroll action made more simpler
+* empty id3 tag bug fixed (" - " should not appear anymore)
+* fixed playlist display for number > 1000
+* ncurses acs characters bug can be now "skiped" by "--fakelines" argument
+eg: xmp --fakelines; 
++ if someone nows how to fix the ncurses bug, please email me!
+* playlist load display bug fixed (stupid bug)
+* added statistics (current session and global songs played and time played)
+* Alexandru Armean's email address corrected (pitu@papiu.orizont.net)
 
 linuxeyes v0.6 (July 2002)
-    * added 10-band equalizer
-    * welcome text display bug fixed (~"LinuxEyes v0.6 [press h for help]")
-    * added load/save equalizer functions
-    * title bar content changed ("LinuxEyes MP3 Player")
-    * added clock on title bar
-    * keymap changed: e : Equalizer <-> E : File Entry
-    * added 4 clock display modes
-    * help was reorganised, now it's more clear
-    * maximmum file number in playlist extended to 10000 (was 5000)
-    * added display protection system (lock display with password)
-    * added a new player mode ("Password")
-    * Shut Down mode bug fixed (playlist is now saved in Shut Down mode)
-    * filename size enlarged (from 500 to 1000) => new playlist format (LE6PL)
-    * quit key changed to 'Q' for more safe use
-    * add files dialog bux fixed (at least I hope so)
-    * new code for current song and next song, now the filename is stored, not the playlist number
-    * some useless code was eliminated
-    * playlist format changed to LE6PL
-    * added import/export playlist format for LE5PL (LinuxEyes v0.5); export is not recommaned
-    * unlimited previous songs bug fixed (previous function stops at the first song)
-    * added new clock mode (no clock mode)
-    * search (jump) function searches now in filenames too, not only in id3
-    * about box content changed
-    * currsor is now hidden
-    * libncurses.so.5.2 (Red Hat 7.3) border bug fixed, player does not deppend on libncurses borders anymore (Yuppie!)
-    * edit entries have a currsor now
-    * file existance check bug fixed (directories are not reconsied as OK files anymore)
-    * "Shut Down" mode works better now, exists clean and then shuts down
-    * Search function mow displays an empty list if nothing found
-    * added screen size autodetect function (--autoscr), not yet finished so use with care
-    * dropped add url edit box (wasn't working since the begining, Oops!)
-    * help was updated, some keys where missing (Sorry)
+* added 10-band equalizer
+* welcome text display bug fixed (~"LinuxEyes v0.6 [press h for help]")
+* added load/save equalizer functions
+* title bar content changed ("LinuxEyes MP3 Player")
+* added clock on title bar
+* keymap changed: e : Equalizer <-> E : File Entry
+* added 4 clock display modes
+* help was reorganised, now it's more clear
+* maximmum file number in playlist extended to 10000 (was 5000)
+* added display protection system (lock display with password)
+* added a new player mode ("Password")
+* Shut Down mode bug fixed (playlist is now saved in Shut Down mode)
+* filename size enlarged (from 500 to 1000) => new playlist format (LE6PL)
+* quit key changed to 'Q' for more safe use
+* add files dialog bux fixed (at least I hope so)
+* new code for current song and next song, now the filename is stored, not the playlist number
+* some useless code was eliminated
+* playlist format changed to LE6PL
+* added import/export playlist format for LE5PL (LinuxEyes v0.5); export is not recommaned
+* unlimited previous songs bug fixed (previous function stops at the first song)
+* added new clock mode (no clock mode)
+* search (jump) function searches now in filenames too, not only in id3
+* about box content changed
+* currsor is now hidden
+* libncurses.so.5.2 (Red Hat 7.3) border bug fixed, player does not deppend on libncurses borders anymore (Yuppie!)
+* edit entries have a currsor now
+* file existance check bug fixed (directories are not reconsied as OK files anymore)
+* "Shut Down" mode works better now, exists clean and then shuts down
+* Search function mow displays an empty list if nothing found
+* added screen size autodetect function (--autoscr), not yet finished so use with care
+* dropped add url edit box (wasn't working since the begining, Oops!)
+* help was updated, some keys where missing (Sorry)
 
 linuxeyes v0.5 (December 2001)
-    * added special functions
-    * JazzPIPER MCD650S Playlist Generator
-    * page up/page down bug fixed
-    * jump to file dialog bug fixed (text too long)
-    * playlist format changed (binary format)
-    * added reverse playlist function
-    * added playlist import/export functions
-    * import/export formats supported: XMMS and le3
-    * name bug fixed (logo display)
-    * full resizeable desktop (for hi-res terminals)
-    * too small desktop bug fixed
-    * added console messages display
-    * new configuration files (~/.linuexeyes.console, ~/.linuxeyes.config, ~/.linuxeyes.playlist)
-    * new possible install mode (/usr/local/xmp)
-    * some useless code has been eliminated
-    * bottom line bug fixed
+* added special functions
+* JazzPIPER MCD650S Playlist Generator
+* page up/page down bug fixed
+* jump to file dialog bug fixed (text too long)
+* playlist format changed (binary format)
+* added reverse playlist function
+* added playlist import/export functions
+* import/export formats supported: XMMS and le3
+* name bug fixed (logo display)
+* full resizeable desktop (for hi-res terminals)
+* too small desktop bug fixed
+* added console messages display
+* new configuration files (~/.linuexeyes.console, ~/.linuxeyes.config, ~/.linuxeyes.playlist)
+* new possible install mode (/usr/local/xmp)
+* some useless code has been eliminated
+* bottom line bug fixed
 
 linuxeyes v0.4 (November 2001)
-    * added playlist options menu  
+* added playlist options menu  
 
 linuxeyes v0.3 (October 2001)
-    * show non-existing files (files highlight)
-    * "Shut Down" after this song, key "0"
-    * nice scrolling
-    * player modes ("Normal","Shuffle","Next Song","Shut Down")
-    * added file information box (id3 tag info)
-    * added editbox for "save playlist" and "Add URL"
-    * better playlist load display
-    * added playlist file entry editbox
-    * added jump to file function
-    * mode is saved to config file
-    * playlist format changed
-    * auto-refesh list excluded
-    * new playlist filetype, better
-    * total time display
-    * file add dialog bug fixed (text too long)
+* show non-existing files (files highlight)
+* "Shut Down" after this song, key "0"
+* nice scrolling
+* player modes ("Normal","Shuffle","Next Song","Shut Down")
+* added file information box (id3 tag info)
+* added editbox for "save playlist" and "Add URL"
+* better playlist load display
+* added playlist file entry editbox
+* added jump to file function
+* mode is saved to config file
+* playlist format changed
+* auto-refesh list excluded
+* new playlist filetype, better
+* total time display
+* file add dialog bug fixed (text too long)
 
 linuxeyes v0.2 (July 2001)
-    * playlist editor
-    * id3 and time playlist display
-    * better playlist function
-    * added id3 tag support
-    * fixed name bug
-    * added master volume, pcm volume and balance control
-    * new key defines
-    * added status bar
-    * better shuffle function
-    * previous function add
-    * resizeable desktop
-    * bad mpeg file problem solved
-    * better help, now in widow
-    * better about page in window
-        
+* playlist editor
+* id3 and time playlist display
+* better playlist function
+* added id3 tag support
+* fixed name bug
+* added master volume, pcm volume and balance control
+* new key defines
+* added status bar
+* better shuffle function
+* previous function add
+* resizeable desktop
+* bad mpeg file problem solved
+* better help, now in widow
+* better about page in window
+
 linuxeyes v0.1 (December 2000)
-    * first release
-    * MPEG file support
-    * playlist
-    * random next
+* first release
+* MPEG file support
+* playlist
+* random next
 
