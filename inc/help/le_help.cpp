@@ -68,7 +68,7 @@
     strcpy(help_s[62]," |            : On/Off Shut Down mode");
     strcpy(help_s[63]," o            : Settings");
     strcpy(help_s[64]," ESC          : Screen Saver");
-    strcpy(help_s[65]," ALT+SHIFT+Q  : Quit");
+    strcpy(help_s[65]," ALT+Q or Q   : Quit");
     strcpy(help_s[66],"");
     strcpy(help_s[67],"PLAYLIST");
     strcpy(help_s[68]," a            : Add File");

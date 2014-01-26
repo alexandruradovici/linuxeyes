@@ -63,7 +63,7 @@ PLAYER
  |            : On/Off Shut Down mode
  o            : Settings
  ESC          : Screen Saver
- ALT+SHIFT+Q  : Quit
+ ALT+Q or Q   : Quit
 
 PLAYLIST
  a            : Add File

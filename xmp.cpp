@@ -206,6 +206,7 @@ int saveconfig();
 //#include "mpeg_codec.h"
 #include "bass.h"
 #include <stdlib.h>
+#include <wiringPi.h>
 #include <stdio.h>
 #include <time.h>
 #include <curses.h>
@@ -300,22 +301,32 @@ int getkey (int v)
   int nr_v=-1;
   int function=-1;
   int set_of_keys[10];
-//  mvprintw (1,1,"                           ");
-//  mvprintw (1,1,"T:");
-  while (v!=ERR)
+  int limit = 3;
+  // mvprintw (1,1,"                           ");
+  // mvprintw (1,1,"T:");
+  int g=0;
+  do
+  {
+  while (v!=ERR && nr_v < limit-1)
   {
     nr_v++;
     set_of_keys[nr_v]=v;
-//    mvprintw (1,3+nr_v*4,"%d",v);
-    v=getch();
+    // mvprintw (1,3+nr_v*4,"%d",v);
+    if (nr_v < limit-1) v=getch();
   }
-  int g=0;
   for (int i=0;(i<nr_keys) && (!g);i++)
   {
     g=1;
     for (int j=0;j<=nr_v;j++) if (set_of_keys[j]!=keys[i].key[j]) g=0;
     if (g) function=keys[i].id;
   }
+  if (!g)
+  {
+   limit++;
+   v=getch ();
+  }
+  }
+  while (v!=ERR && !g);
 //  mvprintw (2,1," Function: %d   ",function);
   if (function!=-1) return 10000+function;
   else if (nr_v==1) return 20000+set_of_keys[1];
@@ -560,9 +571,11 @@ int id3 (char *name, mpeg_id3 *my_id3)
     int namefile = BASS_StreamCreateFile (FALSE, name, 0, 0, 0);
     if (namefile != -1)
     {
-	int d = BASS_ChannelBytes2Seconds(musicfile, BASS_ChannelGetLength (namefile, BASS_POS_BYTE));
+	int d = BASS_ChannelBytes2Seconds(namefile, BASS_ChannelGetLength (namefile, BASS_POS_BYTE));
 	min = d/60;
 	sec = d%60;
+	// min = 10;
+	// sec=10;
 	BASS_StreamFree (namefile);
     }
     strcpy (text,"");
@@ -1288,6 +1301,21 @@ void messages()
 	  n1=n;
 	}
     }
+	if (getenv ("VUMETER"))
+	{
+		long level = BASS_ChannelGetLevel(musicfile); // dealing with stereo 
+		int LEDS = atoi (getenv ("LEDS"));
+		if (level > -1 )
+		{
+  			int l = ((LOWORD(level)+HIWORD(level))/2 * (LEDS+1)) / 32768; // the left level 
+         	 	// mvprintw (dx+1,nrcols-21,"l %d", l);
+			for (int i=0; i<LEDS; i++)
+			{
+				if (i<l) digitalWrite (i, 1);
+				else digitalWrite (i, 0);
+			}
+		}
+	}
 	int s = BASS_ChannelIsActive (musicfile);
 	if (s == BASS_ACTIVE_STOPPED) try_again=1; 
     }
@@ -3720,6 +3748,7 @@ void playlist ()
         if (v=='d') {deletefile (m+k); if (((m+nrscr) > n) && (n > nrscr)) m--;}
         if (v=='S') { sort (0,n); getcurent();}
         if (v=='`') reset();
+	if (v=='Q') quit = 1;
         if (v=='R') {k=-1; m=0; n=-1; l=-1;}
         if (v=='>') position(5);
         if (v=='<') position(-5);
@@ -3802,6 +3831,15 @@ void playlist ()
 
 int main(int argc,char *argv[])
 {
+    if (getenv("VUMETER"))
+    {
+      wiringPiSetup ();
+      int LEDS = atoi (getenv ("LEDS"));
+      for (int i=0; i<LEDS; i++)
+      {
+        pinMode (i, OUTPUT);
+      }
+    }
     // text pt. mesaje
     key_t K = ftok ("/",'E');
     int mem_id = shmget (K, 5, IPC_CREAT|0666);
@@ -3900,7 +3938,7 @@ int main(int argc,char *argv[])
     //cbreak();
     raw();
     if (nolines) fakelines();
-    //keypad (stdscr,TRUE);
+    // keypad (stdscr,TRUE);
     curs_set (0);
     colors();
     setcolor (3,1);

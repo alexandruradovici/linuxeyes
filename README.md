@@ -11,7 +11,7 @@ Download and compile it
 
 Run it
 
-    ./xmp
+    make play
 
 Changelog
 ---------
