@@ -13,10 +13,15 @@ Run it
 
     make play
 
+Run Raspberry Pi VU meter
+
+    make playvumeter
+
 Changelog
 ---------
 linuxeyes v1.1 (Raspberry Pi version)
 * added LIBBASS.SO decoder
+* added Raspberry Pi VU meter
 
 linuxeyes v1.1 ()
 * terminal size waring bug fixed (now 30 lines if OK)
