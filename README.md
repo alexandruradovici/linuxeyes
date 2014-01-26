@@ -20,8 +20,8 @@ Run Raspberry Pi VU meter
 Changelog
 ---------
 linuxeyes v1.1 (Raspberry Pi version)
-* added LIBBASS.SO decoder
 * added Raspberry Pi VU meter
+* added LIBBASS.SO decoder
 
 linuxeyes v1.1 ()
 * terminal size waring bug fixed (now 30 lines if OK)
