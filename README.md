@@ -13,9 +13,14 @@ Run it
 
     make play
 
+Run Raspberry Pi VU meter
+
+    make playvumeter
+
 Changelog
 ---------
 linuxeyes v1.1 (Raspberry Pi version)
+* added Raspberry Pi VU meter
 * added LIBBASS.SO decoder
 
 linuxeyes v1.1 ()
