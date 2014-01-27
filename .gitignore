@@ -2,23 +2,8 @@
 *.slo
 *.lo
 *.o
-<<<<<<< HEAD
 xmp
 
-# Compiled Dynamic libraries
-=======
-
-# Compiled Dynamic libraries
-*.so
->>>>>>> 2f08132bc83e0a817642f68c8181b0d0dc420999
-*.dylib
-
-# Compiled Static libraries
-*.lai
-*.la
-<<<<<<< HEAD
-
-# Packages #
 ############
 # it's better to unpack these files and commit the raw source
 # git has its own built in compression methods
@@ -49,4 +34,3 @@ Thumbs.db
 
 =======
 *.a
->>>>>>> 2f08132bc83e0a817642f68c8181b0d0dc420999
