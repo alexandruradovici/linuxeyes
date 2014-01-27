@@ -3973,7 +3973,7 @@ int main(int argc,char *argv[])
     if (saveconfig ()) printf ("xmp: configuration saved\n\r");
     else printf ("xmp: configuration could bot be saved\n\r");
     add_console_message ("Almost done");
-    printf ("Thank you for using LinuxEyes Player\n\rPlease report bugs to linueyes@lug.orizont.net\n\r");
+    printf ("Thank you for using LinuxEyes Player\n\rPlease report bugs to alex@ipworkshop.ro\n\r");
     add_console_message ("Bye Bye");
     if (nclose==1) 
     {
