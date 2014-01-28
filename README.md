@@ -13,9 +13,17 @@ Run it
 
     make play
 
-Run Raspberry Pi VU meter
+Run Raspberry Pi VU meter with 10 leds
 
-    make playvumeter
+    make playvumeterleds
+
+Run Raspberry Pi VU meter with an RGB led
+
+    make playvumeterrgb
+    
+Run Raspberry Pi VU meter with 10 leds and an RGB led
+
+    make playvumeters
 
 Changelog
 ---------
