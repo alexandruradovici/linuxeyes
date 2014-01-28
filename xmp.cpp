@@ -99,6 +99,13 @@ char *str_memout;
 //timevar_type radio_on, radio_off; //radio mode times
 //timevar_type sleeptime; // time to shut down for sleep mode
 
+
+#define VUMETER_OFF	0
+#define VUMETER_LEDS	1
+#define	VUMETER_LED_RGB	2
+
+int vumeter = VUMETER_OFF;
+
 const char playlist_type[7]="LEPZ11";
 
 struct read_text
@@ -1301,19 +1308,36 @@ void messages()
 	  n1=n;
 	}
     }
-	if (getenv ("VUMETER"))
+	if (vumeter)
 	{
 		long level = BASS_ChannelGetLevel(musicfile); // dealing with stereo 
-		int LEDS = atoi (getenv ("LEDS"));
-		if (level > -1 )
+		if (vumeter & VUMETER_LEDS)
 		{
-  			int l = ((LOWORD(level)+HIWORD(level))/2 * (LEDS+1)) / 32768; // the left level 
-         	 	// mvprintw (dx+1,nrcols-21,"l %d", l);
-			for (int i=0; i<LEDS; i++)
+			int LEDS = atoi (getenv ("LEDS"));
+			if (level > -1 )
 			{
-				if (i<l) digitalWrite (i, 1);
-				else digitalWrite (i, 0);
+  				int l = ((LOWORD(level)+HIWORD(level))/2 * (LEDS+1)) / 32768; // the left level 
+         	 		// mvprintw (dx+1,nrcols-21,"l %d", l);
+				for (int i=0; i<LEDS; i++)
+				{
+					if (i<l) digitalWrite (i, 1);
+					else digitalWrite (i, 0);
+				}
 			}
+                }
+		if (vumeter & VUMETER_LED_RGB)
+		{
+			int lights[] = {0, 4, 6, 6, 2, 2, 3, 5, 5, 1, 1};
+			int LEDS = 10;
+			if (getenv ("LED_RGB"))
+			{
+  				int l = ((LOWORD(level)+HIWORD(level))/2 * (LEDS+1)) / 32768; // the left level 
+				int LED_RGB = atoi (getenv ("LED_RGB"));
+				digitalWrite (LED_RGB, lights[l] & 1);
+				digitalWrite (LED_RGB+1, (lights[l] & 2)>>1);
+				digitalWrite (LED_RGB+2, lights[l] >> 2);
+			}
+
 		}
 	}
 	int s = BASS_ChannelIsActive (musicfile);
@@ -3833,12 +3857,27 @@ int main(int argc,char *argv[])
 {
     if (getenv("VUMETER"))
     {
+      const char *v = getenv ("VUMETER");
+      if  (strncmp (v, "LEDS", 4)==0) vumeter = vumeter | VUMETER_LEDS;
+      if  (strncmp (v, "LED_RGB", 6)==0) vumeter = vumeter | VUMETER_LED_RGB;
+      if  (strncmp (v, "LEDS_LED_RGB", 12)==0) vumeter = vumeter | (VUMETER_LEDS + VUMETER_LED_RGB);
       wiringPiSetup ();
-      int LEDS = atoi (getenv ("LEDS"));
-      for (int i=0; i<LEDS; i++)
+      if (vumeter & VUMETER_LEDS)
       {
-        pinMode (i, OUTPUT);
+      	int LEDS = atoi (getenv ("LEDS"));
+     	for (int i=0; i<LEDS; i++)
+      	{
+        	pinMode (i, OUTPUT);
+      	}
+      } 
+      if (vumeter & VUMETER_LED_RGB)
+      {
+      	int LED_RGB = atoi (getenv ("LED_RGB"));
+        pinMode (LED_RGB, OUTPUT);
+        pinMode (LED_RGB+1, OUTPUT);
+        pinMode (LED_RGB+2, OUTPUT);
       }
+
     }
     // text pt. mesaje
     key_t K = ftok ("/",'E');

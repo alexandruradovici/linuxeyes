@@ -13,5 +13,12 @@ xmp: xmp.cpp inc/*.cpp inc/help/*.cpp generators/*.pas generators/help.le genera
 play:
 	LD_LIBRARY_PATH=. ./xmp
 
-playvumeter:
-	sudo LD_LIBRARY_PATH=. VUMETER=1 LEDS=10 ./xmp
+playvumeterleds:
+	sudo LD_LIBRARY_PATH=. VUMETER=LEDS LEDS=10 ./xmp
+
+playvumeterrgb:
+	sudo LD_LIBRARY_PATH=. VUMETER=LED_RGB LED_RGB=10 ./xmp
+
+playvumeters:
+	sudo LD_LIBRARY_PATH=. VUMETER=LEDS_LED_RGB LEDS=10 LED_RGB=10 ./xmp
+
